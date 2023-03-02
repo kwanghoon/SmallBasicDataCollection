@@ -18,7 +18,7 @@
       ./smallbasic-programs                          (지정한 폴더에서)
       -name "*.sb"                                       (.sb 확장자 파일을 찾아)
       -print -exec stack exec - sbparser-exe \{\} \;   (각각 sbparser-exe를 실행)
-      > smallbasic-program-list-yapb-data-collection_results.txt
+      > ./data/smallbasic-program-list-yapb-data-collection_results.txt
 
    (참고) yapb.config에서 config_COLLECT=True 로 설정해야함 
 
@@ -29,11 +29,11 @@
       ./Sample                                            (MySmallBasic 아래의 지정한 폴더에서)
       -name "[0-9][0-9]*.sb"                           (.sb 확장자 파일을 찾아)
       -print -exec stack exec - sbparser-exe \{\} \;   (각각 sbparser-exe를 실행)
-      > smallbasic-tutorial-list-yapb-data-collection_results.txt
+      > ./data/smallbasic-tutorial-list-yapb-data-collection_results.txt
 
    (참고) yapb.config에서 config_COLLECT=True 로 설정해야함 
 
- 5)단계의 결과
+ 5)단계의 결과 (data 폴더 파일 2개)
   - smallbasic-program-list-yapb-data-collection_results.txt
   - smallbasic-tutorial-list-yapb-data-collection_results.txt
 
