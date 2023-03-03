@@ -19,9 +19,9 @@ public class PerformanceAnalysis {
 	
 	public static void main(String[] args) throws IOException {
 		
-		buildSyntaxData();
+		buildSyntaxData(); // 튜토리얼 프로그램에서 수집된 구문 완성 후보를 list로 만듦
 		
-		searchForSyntax(searchList);
+		searchForSyntax(searchList); // 스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보 목록에 포함되어 있는지 확인
 		
 	}
 	
@@ -54,7 +54,7 @@ public class PerformanceAnalysis {
 					}
 				}
 				
-				// 검색할 구문 추가
+				// 만든 구문 완성 후보 목록에 포함되어있는지 검사할 튜토리얼 프로그램 구문 완성 후보 list로 저장
 				searchList.add(String.join(" ", str_arr));
 			}
 		}
@@ -67,12 +67,14 @@ public class PerformanceAnalysis {
 		
 		boolean flag;
 		int state, value, size = 0;
+		// 저장해놓은 튜토리얼 프로그램의 구문 완성 후보만큼 실행
 		for(int i = 0; i < list.size(); i++) {
 			total++;
 			
 			flag = false;
 			value = 0;
 			String[] line = list.get(i).split(" ");
+			// 파싱 상태 번호와 빈도를 제외한 구문 완성 후보만을 뽑아 저장
 			String[] arr = Arrays.copyOfRange(line, 1, line.length - 1);
 			ArrayList<String> arrList = new ArrayList<String>(Arrays.asList(arr));
 			
@@ -82,7 +84,7 @@ public class PerformanceAnalysis {
 				size = dataManager.getMap().get(state).size(); // 해당 상태에 대한 후보 개수
 				value = dataManager.searchForSyntaxCompletion(arrList, state); // 찾은 후보들 중 몇 번째에 해당하는지
 				
-				if(value != 0) flag = true;
+				if(value != 0) flag = true; // 후보가 0번째에 해당한다면 목록에 없는 것
 			}
 			
 			String result = "";

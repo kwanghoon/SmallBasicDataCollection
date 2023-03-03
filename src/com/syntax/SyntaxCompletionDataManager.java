@@ -19,9 +19,9 @@ public class SyntaxCompletionDataManager {
 
 	public static void main(String[] args) throws IOException {
 		
-		buildSyntaxCompletionData();
+		buildSyntaxCompletionData(); // 스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보를 해쉬맵으로 만듦
 		
-		listForSyntaxCompletion();
+		listForSyntaxCompletion(); // 만든 목록을 출력
 		
 	}
 	
@@ -31,7 +31,6 @@ public class SyntaxCompletionDataManager {
 	
 	public static void buildSyntaxCompletionData() throws IOException {
 		// 파일에서 상태 추출
-		// String path = System.getProperty("user.dir");
 		String path = "./../../SmallBasic_FileList/SmallBasicText/input_source/datacollection.txt";
 		file = new File(path);
 				
@@ -56,7 +55,8 @@ public class SyntaxCompletionDataManager {
 				state = Integer.parseInt(str_arr[0]);
 				state_count = Integer.parseInt(str_arr[str_arr.length-1]);
 				ArrayList<String> result = new ArrayList<>();
-						
+				
+				// Terminal, Nonterminal 문자열을 T, NT로 바꿔 저장
 				for(int i = 1; i < str_arr.length - 1; i++) {
 					if(str_arr[i].equals("Terminal")) {
 						result.add("T");
@@ -69,7 +69,7 @@ public class SyntaxCompletionDataManager {
 					}
 				}
 						
-				// state값이 존재하지 않으면 추가
+				// 파싱 상태 값이 map에 존재하지 않으면 추가
 				if(!map.containsKey(state)) {
 					map.put(state, new ArrayList<>());
 					map.get(state).add(new Pair(result, state_count));
@@ -105,7 +105,7 @@ public class SyntaxCompletionDataManager {
 		return map;
 	}
 	
-	// 성능 분석 시 사용, 구문 search
+	// PerformanceAnalysis.java에서 사용, 구문이 만든 해쉬맵에 존재하는지 확인
 	public static int searchForSyntaxCompletion(ArrayList<String> arr, int state) {
         int search_state = state;
 	    int value = 0; // 후보 번호
@@ -126,10 +126,8 @@ public class SyntaxCompletionDataManager {
 		return value;
 	} // searchForSyntaxCompletion end
 	
-	// smallBasic 구문 완성 검색 시 사용
-	public ArrayList<String> searchForSyntaxCompletion(String str) {
-		int search_state = Integer.parseInt(str);
-		
+	// smallBasic 구문 완성 검색 시 사용, 상태를 전달받음
+	public ArrayList<String> searchForSyntaxCompletion(int search_state) {
 		ArrayList<Pair> pair = map.get(search_state);
 		ArrayList<String> arr = new ArrayList<String>();
 		for(int i = 0; i < pair.size(); i++) {
@@ -140,6 +138,7 @@ public class SyntaxCompletionDataManager {
 		return arr;
 	} // searchForSyntaxCompletion end
 	
+	// 만든 해쉬맵 확인을 위한 출력
 	public static void listForSyntaxCompletion() {
         int user_state = 0;
         final int MAX_STATE = 118;  // 0 ~ 118

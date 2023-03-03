@@ -54,7 +54,9 @@
         : 해쉬맵 내용을 화면에 출력하는 함수
 
      * int searchForSyntaxCompletion(ArrayList<String> arr, int state)
-        : ??? 
+        : 튜토리얼 프로그램에서 얻은 각 구문 완성 후보를 arr로 얻어와
+          구문 완성 후보 목록에 포함되어 있는지, 포함되어 있다면 몇 번째에 있는지 확인
+          src.com.syntax PerformanceAnalysis 클래스에 적용
 
      * ArrayList<String> searchForSyntaxCompletion(int state)
         : MySmallBasic의 UI에서 호출 (탭을 친 위치 상태 state를 입력받아
@@ -70,4 +72,21 @@
       스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보 목록에서 포함되어 있는지
       포함되어 있다면 몇번째에 있는지를 확인 
 
+  - src.com.syntax PerformanceAnalysis 클래스
+  - 이 클래스 함수들
+   * void buildSyntaxData()
+   	  : 입력 smallbasic-tutorial-list-yapb-data-collection.txt
+   	  : 수집된 구문 완성 후보들을 list로 저장
 
+   * void searchForSyntax(ArrayList<String> list)
+      : 입력 void buildSyntaxData()에서 만들어진 list
+      : 파싱 상태 번호와 빈도를 제외한 구문 완성 후보만을 뽑아
+        src.com.syntax.SyntaxCompletionDataManager 클래스의 
+        int searchForSyntaxCompletion(ArrayList<String> arr, int state)의 arr에 적용
+        스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보 목록에서 포함되어 있는지 확인
+        
+      
+      
+      
+      
+      

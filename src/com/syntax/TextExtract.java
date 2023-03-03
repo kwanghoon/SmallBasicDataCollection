@@ -80,9 +80,9 @@ public class TextExtract {
 				System.err.println(e);
 			}
 		}
+		
 		System.out.println("Total: " + numOfSBFilesTried);
 		System.out.println("Downloads: " + numOfSBFilesDownloaded);
 		System.out.println("Errors: " + (numOfSBFilesTried - numOfSBFilesDownloaded));
 	}
-
 }
