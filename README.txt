@@ -86,8 +86,8 @@
    	  : 입력 smallbasic-tutorial-list-yapb-data-collection.txt
    	  : 수집된 구문 완성 후보들을 list로 저장
 
-   * void searchForSyntax(ArrayList<String> list)
-      : 입력 void buildSyntaxData()에서 만들어진 list
+   * void searchForSyntax(ArrayList<String> list, String path)
+      : 입력 void buildSyntaxData()에서 만들어진 list, args[1]
       : 파싱 상태 번호와 빈도를 제외한 구문 완성 후보만을 뽑아
         src.com.syntax.SyntaxCompletionDataManager 클래스의 
         int searchForSyntaxCompletion(ArrayList<String> arr, int state)의 arr에 적용
