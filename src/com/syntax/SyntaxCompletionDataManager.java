@@ -19,19 +19,19 @@ public class SyntaxCompletionDataManager {
 
 	public static void main(String[] args) throws IOException {
 		
-		buildSyntaxCompletionData(); // 스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보를 해쉬맵으로 만듦
+		// args[0]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
+		buildSyntaxCompletionData(args[0]); // 스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보를 해쉬맵으로 만듦
 		
 		listForSyntaxCompletion(); // 만든 목록을 출력
 		
 	}
 	
-	public SyntaxCompletionDataManager() throws IOException {
-		buildSyntaxCompletionData();
+	public SyntaxCompletionDataManager(String args) throws IOException {
+		buildSyntaxCompletionData(args);
 	}
 	
-	public static void buildSyntaxCompletionData() throws IOException {
+	public static void buildSyntaxCompletionData(String path) throws IOException {
 		// 파일에서 상태 추출
-		String path = "./../../SmallBasic_FileList/SmallBasicText/input_source/datacollection.txt";
 		file = new File(path);
 				
 		bufferedReader = new BufferedReader(new FileReader(file));

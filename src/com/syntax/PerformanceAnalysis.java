@@ -18,18 +18,18 @@ public class PerformanceAnalysis {
 	 */
 	
 	public static void main(String[] args) throws IOException {
+
+		// args[0]: smallbasic-tutorial-list-yapb-data-collection.txt 경로
+		// args[1]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
+		buildSyntaxData(args[0]); // 튜토리얼 프로그램에서 수집된 구문 완성 후보를 list로 만듦
 		
-		buildSyntaxData(); // 튜토리얼 프로그램에서 수집된 구문 완성 후보를 list로 만듦
-		
-		searchForSyntax(searchList); // 스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보 목록에 포함되어 있는지 확인
+		searchForSyntax(searchList, args[1]); // 스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보 목록에 포함되어 있는지 확인
 		
 	}
 	
-	public static void buildSyntaxData() throws IOException {
+	public static void buildSyntaxData(String path) throws IOException {
 		// 파일에서 구문 추출
-		String path = System.getProperty("user.dir");
-		file = new File(path + "/input_source/smallbasic_tutorial_programs.txt");
-		
+		file = new File(path);
 		bufferedReader = new BufferedReader(new FileReader(file));
 		
 		String str;
@@ -60,9 +60,9 @@ public class PerformanceAnalysis {
 		}
 	} // buildSyntaxData end
 	
-	public static void searchForSyntax(ArrayList<String> list) throws IOException {
+	public static void searchForSyntax(ArrayList<String> list, String path) throws IOException {
 		// 저장한 list 검색 및 존재 여부 출력
-		dataManager = new SyntaxCompletionDataManager();
+		dataManager = new SyntaxCompletionDataManager(path);
 		int total = 0, not = 0;
 		
 		boolean flag;

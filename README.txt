@@ -26,7 +26,7 @@
    스몰베이직 프로그램들의 구문 완성 데이터를 수집 
 
  - find 
-      ./Sample                                            (MySmallBasic 아래의 지정한 폴더에서)
+      ./Sample                                         (MySmallBasic 아래의 지정한 폴더에서)
       -name "[0-9][0-9]*.sb"                           (.sb 확장자 파일을 찾아)
       -print -exec stack exec - sbparser-exe \{\} \;   (각각 sbparser-exe를 실행)
       > ./data/smallbasic-tutorial-list-yapb-data-collection_results.txt
@@ -41,9 +41,12 @@
 
 6) 구문 완성 후보 데이터를 해쉬 맵으로 자료구조화
   - 해쉬맵 : 파싱 상태 --> 구문 완성 후보 리스트 (후보 심볼 리스트와 빈도)
-     java -cp src.com.syntax SyntaxCompletionDataManager 
+     java -cp src.com.syntax SyntaxCompletionDataManager data/smallbasic-program-list-yapb-data-colletion_results.txt
 
   - src.com.syntax.SyntaxCompletionDataManager 클래스
+  	입력 args:
+  		args[0]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
+  		
   - 이 클래스 함수들
      * void buildSyntaxCompletionData() 
         : 입력 smallbasic-program-list-yapb-data-collection_results.txt
@@ -66,13 +69,18 @@
 
  7) 튜토리얼 프로그램 작성에서 수집한 구문 완성 후보 해쉬맵을 적용하여 평가
 
-   - java -cp src.com.syntax PerformanceAnalysis
+   - java -cp src.com.syntax PerformanceAnalysis data/smallbasic-tutorial-list-yapb-data-collection.txt 
+   												 data/smallbasic-program-list-yapb-data-colletion_results.txt
 
    - 튜토리얼 프로그램에서 각 위치별 구문 완성 후보가 
       스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보 목록에서 포함되어 있는지
       포함되어 있다면 몇번째에 있는지를 확인 
 
   - src.com.syntax PerformanceAnalysis 클래스
+  	입력 args:
+  		args[0]: smallbasic-tutorial-list-yapb-data-collection.txt 경로
+  		args[1]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
+  
   - 이 클래스 함수들
    * void buildSyntaxData()
    	  : 입력 smallbasic-tutorial-list-yapb-data-collection.txt
