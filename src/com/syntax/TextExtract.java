@@ -15,15 +15,18 @@ public class TextExtract {
 
 	public static void main(String[] args) throws IOException {
 	    
+		// args[0]: smallbasic-program-list.txt 경로
+		// args[1]: .sb 파일들을 담을 경로
 		// 경로 불러오기
 		int numOfSBFilesTried = 0;
 		int numOfSBFilesDownloaded = 0;
 		
 		// 경로 불러오기
-		String rootPath = System.getProperty("user.dir");
+		String rootPath = args[1]; 
+		// System.getProperty("user.dir");
 		
 		// smallbasic id가 저장된 text 파일
-		File file = new File(rootPath + "/input_source/smallbasic-program-list.txt");
+		File file = new File(args[0]);
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 		InputStream is = null;
 		
@@ -61,7 +64,7 @@ public class TextExtract {
 				
 				// 파일 저장
 				 if(!(extract.equals("error"))) {
-					String newFile = rootPath + "/smallbasic-list/"+str+".sb";
+					String newFile = rootPath + "\\" + str+".sb";
 					FileWriter fileWriter = new FileWriter(newFile);
 					fileWriter.write(extract);
 					fileWriter.close();
@@ -80,9 +83,9 @@ public class TextExtract {
 				System.err.println(e);
 			}
 		}
+		
 		System.out.println("Total: " + numOfSBFilesTried);
 		System.out.println("Downloads: " + numOfSBFilesDownloaded);
 		System.out.println("Errors: " + (numOfSBFilesTried - numOfSBFilesDownloaded));
 	}
-
 }
