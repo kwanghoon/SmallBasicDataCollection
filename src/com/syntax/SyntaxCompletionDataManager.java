@@ -4,11 +4,14 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 public class SyntaxCompletionDataManager {
 	private static HashMap<Integer, ArrayList<Pair>> map;
+	private static ArrayList<Pair> mapForServer;
 	private static BufferedReader bufferedReader;
 	private static File file;
 	
@@ -22,7 +25,8 @@ public class SyntaxCompletionDataManager {
 		// args[0]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
 		buildSyntaxCompletionData(args[0]); // 스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보를 해쉬맵으로 만듦
 		
-		listForSyntaxCompletion(); // 만든 목록을 출력
+		//listForSyntaxCompletion(); // 만든 목록을 출력
+		buildForServerSyntaxCompletion();
 		
 	}
 	
@@ -155,6 +159,48 @@ public class SyntaxCompletionDataManager {
 	        user_state = user_state + 1;
         }
 	} // listForSyntaxCompletion end
+	
+	// 서버로부터 받은 문자열 구문 후보의 형태로 맵을 생성
+	public static void buildForServerSyntaxCompletion() {
+		mapForServer = new ArrayList<>();
+		int user_state = 0;
+        final int MAX_STATE = 118;  // 0 ~ 118
+        
+        while (user_state <= MAX_STATE) {
+	        if (map.get(user_state) != null) {
+				for(int i = 0; i < map.get(user_state).size(); i++) {
+					List<Integer> idxList = findIndexes("NT", map.get(user_state).get(i).getFirst());
+					mapForServer.add(new Pair(map.get(user_state).get(i).getFirst(), map.get(user_state).get(i).getSecond()));
+	
+					// NT 다음 문자열에 대해 "..." 으로 바꿔 서버로부터 받는 문자열과 맞춘다.
+					for(int idx : idxList) {
+						mapForServer.get(i).getFirst().set(idx+1, "...");
+					}
+					// NT, T 문자열 제거
+					String str = String.join(" ", mapForServer.get(i).getFirst());
+					str = str.replaceAll("NT", "");
+					str = str.replaceAll("T", "");
+					
+					mapForServer.get(i).setFirst(new ArrayList<String>(Arrays.asList(str.split(" "))));
+				}
+	        }
+	        
+	        user_state = user_state + 1;
+        }
+	}
+	
+	// buildForServerSyntaxCompletion에서 NT 다음 단어의 위치를 찾기 위한 함수
+	public static List<Integer> findIndexes(String word, ArrayList<String> document) {
+		List<Integer> indexList = new ArrayList<Integer> ();
+		int index = document.indexOf(word);
+		
+		while(index != -1) {
+			indexList.add(index);
+			index = document.indexOf(word);
+		}
+		
+		return indexList;
+	}
 	
  	static class Pair implements Comparable<Pair>{
  		private ArrayList<String> first;
