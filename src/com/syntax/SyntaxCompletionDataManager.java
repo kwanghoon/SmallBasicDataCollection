@@ -11,7 +11,6 @@ import java.util.List;
 
 public class SyntaxCompletionDataManager {
 	private static HashMap<Integer, ArrayList<Pair>> map;
-	private static ArrayList<Pair> mapForServer;
 	private static BufferedReader bufferedReader;
 	private static File file;
 	
@@ -25,8 +24,7 @@ public class SyntaxCompletionDataManager {
 		// args[0]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
 		buildSyntaxCompletionData(args[0]); // 스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보를 해쉬맵으로 만듦
 		
-		//listForSyntaxCompletion(); // 만든 목록을 출력
-		buildForServerSyntaxCompletion();
+		listForSyntaxCompletion(); // 만든 목록을 출력
 		
 	}
 	
@@ -131,12 +129,15 @@ public class SyntaxCompletionDataManager {
 	} // searchForSyntaxCompletion end
 	
 	// smallBasic 구문 완성 검색 시 사용, 상태를 전달받음
-	public ArrayList<String> searchForSyntaxCompletion(int search_state) {
-		ArrayList<Pair> pair = map.get(search_state);
+	public ArrayList<String> searchForSyntaxCompletion(ArrayList<Integer> stateList) {
 		ArrayList<String> arr = new ArrayList<String>();
-		for(int i = 0; i < pair.size(); i++) {
-			// 전달받은 상태에 대한 후보 구문들을 공백으로 나누어 리스트에 저장
-			arr.add(String.join(" ", pair.get(i).getFirst()) + " ");
+		
+		for(int state : stateList) {
+			ArrayList<Pair> pair = map.get(state);
+			for(int i = 0; i < pair.size(); i++) {
+				// 전달받은 상태에 대한 후보 구문들을 공백으로 나누어 리스트에 저장
+				arr.add(String.join(" ", pair.get(i).getFirst()) + " ");
+			}	
 		}
 		
 		return arr;
@@ -160,35 +161,6 @@ public class SyntaxCompletionDataManager {
         }
 	} // listForSyntaxCompletion end
 	
-	// 서버로부터 받은 문자열 구문 후보의 형태로 맵을 생성
-	public static void buildForServerSyntaxCompletion() {
-		mapForServer = new ArrayList<>();
-		int user_state = 0;
-        final int MAX_STATE = 118;  // 0 ~ 118
-        
-        while (user_state <= MAX_STATE) {
-	        if (map.get(user_state) != null) {
-				for(int i = 0; i < map.get(user_state).size(); i++) {
-					List<Integer> idxList = findIndexes("NT", map.get(user_state).get(i).getFirst());
-					mapForServer.add(new Pair(map.get(user_state).get(i).getFirst(), map.get(user_state).get(i).getSecond()));
-	
-					// NT 다음 문자열에 대해 "..." 으로 바꿔 서버로부터 받는 문자열과 맞춘다.
-					for(int idx : idxList) {
-						mapForServer.get(i).getFirst().set(idx+1, "...");
-					}
-					// NT, T 문자열 제거
-					String str = String.join(" ", mapForServer.get(i).getFirst());
-					str = str.replaceAll("NT", "");
-					str = str.replaceAll("T", "");
-					
-					mapForServer.get(i).setFirst(new ArrayList<String>(Arrays.asList(str.split(" "))));
-				}
-	        }
-	        
-	        user_state = user_state + 1;
-        }
-	}
-	
 	// buildForServerSyntaxCompletion에서 NT 다음 단어의 위치를 찾기 위한 함수
 	public static List<Integer> findIndexes(String word, ArrayList<String> document) {
 		List<Integer> indexList = new ArrayList<Integer> ();
@@ -196,7 +168,8 @@ public class SyntaxCompletionDataManager {
 		
 		while(index != -1) {
 			indexList.add(index);
-			index = document.indexOf(word);
+			index = document.indexOf(word);  // 무한으로 돌아가는 문제발생
+			System.out.println(index);
 		}
 		
 		return indexList;
