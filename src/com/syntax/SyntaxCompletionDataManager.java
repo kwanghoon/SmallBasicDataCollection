@@ -139,7 +139,6 @@ public class SyntaxCompletionDataManager {
          if(pair == null) continue; // 상태 2와 같은 사이즈가 없는 경우 pass
          for(int i = 0; i < pair.size(); i++) {
             // 전달받은 상태에 대한 후보 구문들을 공백으로 나누어 리스트에 저장
-            //arr.add(String.join(" ", pair.get(i).getFirst()) + " ");
             arr.add(new Pair(pair.get(i).getFirst(), pair.get(i).getSecond()));
          }   
       }
@@ -147,12 +146,17 @@ public class SyntaxCompletionDataManager {
       return arr;
    } // searchForSyntaxCompletion end
    
-   // 구문 후보 map 에서 구문 후보들만을 뽑아 array로 변환하여 리턴 
-   public ArrayList<String> mapToArray(Map<Integer, ArrayList<String>> sortList) {
+   // 구문 후보 map 에서 구문 후보들만을 뽑아 내림차순 정렬 후 array로 변환하여 리턴 
+   public ArrayList<String> mapToArray(Map<ArrayList<String>, Integer> sortList) {
+      // 내림차순 정렬
+      List<ArrayList<String>> keySet = new ArrayList<>(sortList.keySet());
+      keySet.sort((o1, o2) -> sortList.get(o2).compareTo(sortList.get(o1)));
+      
+      // array로 변환 후 리턴
       ArrayList<String> list = new ArrayList<>();
-      for( ArrayList<String> value : sortList.values() ){
-         list.add(String.join(" ", value));
-         }
+      for( ArrayList<String> key : keySet){
+         list.add(String.join(" ", key));
+      }
       
       return list;
    }
