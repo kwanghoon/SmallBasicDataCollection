@@ -58,8 +58,6 @@ public class SyntaxCompletionDataManager {
             state_count = Integer.parseInt(str_arr[str_arr.length-1]);
             ArrayList<String> result = new ArrayList<>();
             
-            if(state == 2) System.out.println("상태 2");
-            
             // Terminal, Nonterminal 문자열을 T, NT로 바꿔 저장
             for(int i = 1; i < str_arr.length - 1; i++) {
                if(str_arr[i].equals("Terminal")) {
