@@ -61,15 +61,20 @@
           구문 완성 후보 목록에 포함되어 있는지, 포함되어 있다면 몇 번째에 있는지 확인
           src.com.syntax PerformanceAnalysis 클래스에 적용
 
-     * ArrayList<String> searchForSyntaxCompletion(int state)
-        : MySmallBasic의 UI에서 호출 (탭을 친 위치 상태 state를 입력받아
-          해당 상태의 구문 완성 후보 리스트를 반환) 
+     * ArrayList<Pair> searchForSyntaxCompletion(ArrayList<Integer> stateList)
+        : MySmallBasic의 UI에서 호출 (ctrl + space를 친 위치 상태 state 리스트 입력받아
+          해당 상태의 구문 완성 후보 리스트를 반환 -> pair{구문 후보, 빈도수}) 
+          
+     * ArrayList<String> mapToArray(Map<ArrayList<String>, Integer> sortList)
+     	: 각 상태에 대해 저장한 구문후보와 빈도수를 저장했던 set을 입력으로 받아와
+     	  빈도수가 높은 것부터 우선적으로 출력하도록 정렬(내림차순 정렬)
+     	  내림차순 정렬 후 ArrayList에 저장하며 빈도수는 제거하여 반환
     
        smallbasic-program-list-yapb-data-collection_results.txt
 
  7) 튜토리얼 프로그램 작성에서 수집한 구문 완성 후보 해쉬맵을 적용하여 평가
 
-   - java -cp src.com.syntax PerformanceAnalysis data/smallbasic-tutorial-list-yapb-data-collection.txt 
+   - java -cp src.com.syntax PerformanceAnalysis data/smallbasic-tutorial-list-yapb-data-collection_results.txt 
    												 data/smallbasic-program-list-yapb-data-colletion_results.txt
 
    - 튜토리얼 프로그램에서 각 위치별 구문 완성 후보가 
