@@ -18,7 +18,7 @@
       ./smallbasic-programs                          (지정한 폴더에서)
       -name "*.sb"                                       (.sb 확장자 파일을 찾아)
       -print -exec stack exec - sbparser-exe \{\} \;   (각각 sbparser-exe를 실행)
-      > ./data/smallbasic-program-list-yapb-data-collection_results.txt
+      > ./data/smallbasic-program-list-yapb-data-collection-results.txt
 
    (참고) yapb.config에서 config_COLLECT=True 로 설정해야함 
 
@@ -29,27 +29,27 @@
       ./Sample                                         (MySmallBasic 아래의 지정한 폴더에서)
       -name "[0-9][0-9]*.sb"                           (.sb 확장자 파일을 찾아)
       -print -exec stack exec - sbparser-exe \{\} \;   (각각 sbparser-exe를 실행)
-      > ./data/smallbasic-tutorial-list-yapb-data-collection_results.txt
+      > ./data/smallbasic-tutorial-list-yapb-data-collection-results.txt
 
    (참고) yapb.config에서 config_COLLECT=True 로 설정해야함 
 
  5)단계의 결과 (data 폴더 파일 2개)
-  - smallbasic-program-list-yapb-data-collection_results.txt
-  - smallbasic-tutorial-list-yapb-data-collection_results.txt
+  - smallbasic-program-list-yapb-data-collection-results.txt
+  - smallbasic-tutorial-list-yapb-data-collection-results.txt
 
    (참고) 구문 완성 후보 데이터와 각종 에러 메시지가 뒤섞여 있음
 
 6) 구문 완성 후보 데이터를 해쉬 맵으로 자료구조화
   - 해쉬맵 : 파싱 상태 --> 구문 완성 후보 리스트 (후보 심볼 리스트와 빈도)
-     java -cp src.com.syntax SyntaxCompletionDataManager data/smallbasic-program-list-yapb-data-colletion_results.txt
+     java -cp src.com.syntax SyntaxCompletionDataManager data/smallbasic-program-list-yapb-data-colletion-results.txt
 
   - src.com.syntax.SyntaxCompletionDataManager 클래스
   	입력 args:
-  		args[0]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
+  		args[0]: smallbasic-program-list-yapb-data-colletion-results.txt 경로
   		
   - 이 클래스 함수들
      * void buildSyntaxCompletionData() 
-        : 입력 smallbasic-program-list-yapb-data-collection_results.txt
+        : 입력 smallbasic-program-list-yapb-data-collection-results.txt
         : 에러 메시지들은 모두 스킵하고, 수집한 구문 완성 후보와 빈도들을 파싱 상태별로 모음
         : 출력 해쉬맵
 
@@ -70,12 +70,12 @@
      	  빈도수가 높은 것부터 우선적으로 출력하도록 정렬(내림차순 정렬)
      	  내림차순 정렬 후 ArrayList에 저장하며 빈도수는 제거하여 반환
     
-       smallbasic-program-list-yapb-data-collection_results.txt
+       smallbasic-program-list-yapb-data-collection-results.txt
 
  7) 튜토리얼 프로그램 작성에서 수집한 구문 완성 후보 해쉬맵을 적용하여 평가
 
-   - java -cp src.com.syntax PerformanceAnalysis data/smallbasic-tutorial-list-yapb-data-collection_results.txt 
-   												 data/smallbasic-program-list-yapb-data-colletion_results.txt
+   - java -cp src.com.syntax PerformanceAnalysis data/smallbasic-tutorial-list-yapb-data-collection-results.txt 
+   												 data/smallbasic-program-list-yapb-data-colletion-results.txt
 
    - 튜토리얼 프로그램에서 각 위치별 구문 완성 후보가 
       스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보 목록에서 포함되어 있는지
@@ -83,12 +83,12 @@
 
   - src.com.syntax PerformanceAnalysis 클래스
   	입력 args:
-  		args[0]: smallbasic-tutorial-list-yapb-data-collection.txt 경로
-  		args[1]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
+  		args[0]: smallbasic-tutorial-list-yapb-data-collection-results.txt 경로
+  		args[1]: smallbasic-program-list-yapb-data-colletion-results.txt 경로
   
   - 이 클래스 함수들
    * void buildSyntaxData()
-   	  : 입력 smallbasic-tutorial-list-yapb-data-collection.txt
+   	  : 입력 smallbasic-tutorial-list-yapb-data-collection-results.txt
    	  : 수집된 구문 완성 후보들을 list로 저장
 
    * void searchForSyntax(ArrayList<String> list, String path)
