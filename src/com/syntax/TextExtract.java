@@ -27,6 +27,7 @@ public class TextExtract {
 		
 		// smallbasic id가 저장된 text 파일
 		File file = new File(args[0]);
+		System.out.println(file);
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 		InputStream is = null;
 		
