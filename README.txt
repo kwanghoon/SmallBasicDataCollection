@@ -39,18 +39,18 @@
 
    (참고) 구문 완성 후보 데이터와 각종 에러 메시지가 뒤섞여 있음
 
-6) 구문 완성 후보 데이터를 해쉬 맵으로 자료구조화
-  - 해쉬맵 : 파싱 상태 --> 구문 완성 후보 리스트 (후보 심볼 리스트와 빈도)
-     java -cp src.com.syntax SyntaxCompletionDataManager data/smallbasic-program-list-yapb-data-colletion_results.txt
+6) 파싱 상태에 대한 구문 완성 후보 데이터를 해쉬 맵으로 자료구조화
+  - 해쉬맵 : 각 파싱 상태에 대한 구문 후보 및 빈도 리스트(txt) --> 해쉬맵 구문 완성 후보 리스트 (후보 심볼 리스트와 빈도)
+     java -cp src.com.syntax SyntaxCompletionDataManager data/sbparser/smallbasic-state/smallbasic-syntax-completion-candidates-results.txt
 
   - src.com.syntax.SyntaxCompletionDataManager 클래스
   	입력 args:
-  		args[0]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
+  		args[0]: smallbasic-syntax-completion-candidates-results.txt 경로
   		
   - 이 클래스 함수들
      * void buildSyntaxCompletionData() 
-        : 입력 smallbasic-program-list-yapb-data-collection_results.txt
-        : 에러 메시지들은 모두 스킵하고, 수집한 구문 완성 후보와 빈도들을 파싱 상태별로 모음
+        : 입력 smallbasic-syntax-completion-candidates-results.txt
+        : 수집한 상태별 구문 완성 후보와 빈도들을 해쉬맵으로 만듦
         : 출력 해쉬맵
 
      * void listForSyntaxCompletion()
@@ -98,8 +98,25 @@
         int searchForSyntaxCompletion(ArrayList<String> arr, int state)의 arr에 적용
         스몰베이직 프로그램에서 얻은 데이터 구문 완성 후보 목록에서 포함되어 있는지 확인
         
+ 8) 구문 완성 후보 데이터를 해쉬 맵으로 자료구조화
+  	- 해쉬맵 : 구문 후보 및 빈도 리스트 --> 구문 완성 후보 리스트 (후보 심볼 리스트와 빈도)
+ 		java -cp src.com.syntax RawDataToStateDataManager smallbasic-program-list-yapb-data-colletion_results.txt
+
+    - src.com.syntax.RawDataToStateDataManager 클래스
+    입력 args:
+  		args[0]: smallbasic-program-list-yapb-data-colletion_results.txt 경로
       
+    - 이 클래스 함수들
+     * void buildSyntaxCompletionData()     
+        : 입력 smallbasic-program-list-yapb-data-colletion_results.txt
+        : 수집한 구문 완성 후보와 빈도들을 해쉬맵으로 만듦
+        : 출력 해쉬맵      
+
+     * void listForSyntaxCompletion()
+        : 해쉬맵 내용을 화면에 출력하는 함수      
       
-      
-      
-      
+     * int searchForSyntaxCompletion(ArrayList<String> arr, int state)
+        : 튜토리얼 프로그램에서 얻은 각 구문 완성 후보를 arr로 얻어와
+          구문 완성 후보 목록에 포함되어 있는지, 포함되어 있다면 몇 번째에 있는지 확인
+          src.com.syntax PerformanceAnalysis 클래스에 적용
+                
