@@ -1,0 +1,1376 @@
+State 0
+[T, typedef, NT, list_ge1_type_specifier_nonunique_declaration_specifier] : 268
+[T, typedef, NT, list_eq1_type_specifier_unique_declaration_specifier] : 69
+[T, extern] : 30
+[T, int] : 13
+[T, const] : 4
+[T, char] : 3
+[T, struct] : 3
+[T, enum, NT, option_general_identifier, T, {, NT, enumerator_list, NT, option_comma, T, }] : 2
+[T, void] : 2
+[T, _Bool] : 1
+[T, static] : 1
+[T, inline] : 1
+State 1
+State 2
+State 3
+State 4
+State 5
+[T, NAME, T, VARIABLE] : 192999
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 43766
+[T, (, NT, save_context, NT, declarator, T, )] : 210
+State 6
+[T, NAME, T, VARIABLE] : 61111
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 1782
+[T, (, NT, save_context, NT, declarator, T, )] : 902
+State 7
+State 8
+[T, int] : 108452
+[T, NAME, T, TYPE] : 37000
+[T, void] : 27284
+[T, char] : 25620
+[T, long] : 7105
+[T, unsigned] : 2961
+[T, double] : 2812
+[T, struct] : 2579
+[T, const] : 2126
+[T, _Bool] : 1218
+[T, float] : 862
+[T, enum, NT, general_identifier] : 273
+[T, short] : 248
+[T, inline] : 201
+[T, union] : 48
+[T, _Noreturn] : 46
+[T, volatile] : 27
+[T, static] : 1
+[T, signed] : 1
+State 9
+State 10
+State 11
+State 12
+State 13
+State 14
+State 15
+State 16
+State 17
+[T, int] : 8924
+[T, long] : 3483
+[T, char] : 834
+[T, double] : 773
+[T, const] : 465
+[T, short] : 390
+[T, unsigned] : 27
+[T, volatile] : 12
+[T, inline] : 1
+State 18
+[T, const] : 172
+State 19
+State 20
+State 21
+State 22
+[T, NAME, T, VARIABLE] : 58847
+[T, NAME, T, TYPE] : 34
+State 23
+[T, extern] : 206629
+[T, typedef, NT, list_eq1_type_specifier_unique_declaration_specifier] : 34895
+[T, typedef, NT, list_ge1_type_specifier_nonunique_declaration_specifier] : 28561
+[T, struct] : 11178
+[T, void] : 10612
+[T, static] : 6768
+[T, NAME, T, TYPE] : 3874
+[T, enum, NT, option_general_identifier, T, {, NT, enumerator_list, NT, option_comma, T, }] : 3150
+[T, int] : 2645
+[T, char] : 2514
+[T, _Bool] : 944
+[T, inline] : 845
+[T, union] : 591
+[T, const] : 584
+[T, $] : 397
+[T, enum, NT, general_identifier] : 257
+[T, unsigned] : 170
+[T, double] : 108
+[T, _Noreturn] : 60
+[T, long] : 34
+[T, _Static_assert, T, (, NT, constant_expression, T, ,, T, STRING_LITERAL, T, ), T, ;] : 13
+[T, float] : 2
+[T, short] : 1
+[T, volatile] : 1
+State 24
+State 25
+[T, int] : 144
+[T, struct] : 142
+[T, char] : 102
+[T, register] : 13
+[T, NAME, T, TYPE] : 12
+[T, const] : 7
+[T, unsigned] : 4
+[T, enum, NT, general_identifier] : 1
+[T, _Bool] : 1
+State 26
+[T, TYPE] : 199140
+State 27
+State 28
+State 29
+State 30
+State 31
+State 32
+State 33
+State 34
+State 35
+State 36
+State 37
+State 38
+State 39
+State 40
+State 41
+State 42
+State 43
+State 44
+State 45
+[T, NAME, T, VARIABLE] : 2346
+[T, NAME, T, TYPE] : 3
+State 46
+State 47
+State 48
+State 49
+State 50
+State 51
+State 52
+State 53
+[T, (, NT, constant_expression, T, ,, T, STRING_LITERAL, T, ), T, ;] : 15
+State 54
+[T, NAME, T, TYPE] : 23498
+[T, unsigned] : 14261
+[T, long] : 7234
+[T, struct] : 6919
+[T, int] : 4625
+[T, union] : 3311
+[T, signed] : 1637
+[T, void] : 928
+[T, char] : 600
+[T, volatile] : 317
+[T, enum, NT, option_general_identifier, T, {, NT, enumerator_list, NT, option_comma, T, }] : 189
+[T, enum, NT, general_identifier] : 97
+[T, short] : 89
+[T, double] : 45
+[T, float] : 21
+[T, _Bool] : 16
+[T, const] : 8
+State 55
+State 56
+State 57
+State 58
+State 59
+[T, =, NT, c_initializer] : 9689
+State 60
+[T, ;] : 244727
+State 61
+[T, ,, NT, init_declarator_declarator_varname] : 2662
+State 62
+State 63
+[T, (, NT, scoped_parameter_type_list, T, )] : 166022
+[T, [, NT, option_type_qualifier_list, NT, option_assignment_expression, T, ]] : 18978
+[T, (, NT, save_context, NT, option_identifier_list, T, )] : 505
+State 64
+[T, NAME, T, VARIABLE] : 74440
+[T, (, NT, save_context, NT, declarator, T, )] : 252
+State 65
+[T, VARIABLE] : 1131853
+[T, TYPE] : 54495
+State 66
+State 67
+State 68
+State 69
+State 70
+[T, ;] : 63795
+State 71
+State 72
+State 73
+State 74
+State 75
+State 76
+State 77
+[T, char] : 1
+State 78
+State 79
+State 80
+State 81
+State 82
+State 83
+State 84
+State 85
+State 86
+State 87
+State 88
+State 89
+[T, {, NT, struct_declaration_list, T, }] : 19796
+State 90
+State 91
+State 92
+State 93
+[T, NAME, T, VARIABLE] : 8962
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 6303
+[T, (, NT, save_context, NT, declarator, T, )] : 22
+State 94
+[T, {, NT, option_block_item_list, T, }] : 21641
+State 95
+[T, int] : 176
+[T, char] : 78
+[T, struct] : 43
+[T, NAME, T, TYPE] : 6
+[T, unsigned] : 6
+[T, register] : 4
+[T, void] : 2
+[T, _Bool] : 2
+[T, const] : 2
+State 96
+State 97
+State 98
+[T, {, NT, enumerator_list, NT, option_comma, T, }] : 3469
+State 99
+State 100
+State 101
+State 102
+[T, (, NT, expression, T, )] : 8
+[T, CONSTANT] : 4
+[T, -] : 1
+[T, !] : 1
+[T, NAME, T, VARIABLE] : 1
+State 103
+[T, char] : 70454
+[T, NAME, T, TYPE] : 9884
+[T, void] : 8175
+[T, struct] : 4178
+[T, int] : 418
+[T, union] : 189
+[T, unsigned] : 136
+[T, double] : 114
+[T, float] : 74
+[T, long] : 14
+State 104
+State 105
+State 106
+[T, int] : 32028
+[T, long] : 9594
+[T, const] : 4739
+[T, short] : 4483
+[T, double] : 1967
+[T, char] : 1890
+[T, unsigned] : 387
+State 107
+[T, const] : 1193
+State 108
+[T, NAME, T, VARIABLE] : 4973
+[T, (, NT, expression, T, )] : 1642
+[T, CONSTANT] : 1590
+[T, {, NT, initializer_list, NT, option_comma, T, }] : 702
+[T, (, NT, type_name, T, ), NT, cast_expression] : 314
+[T, STRING_LITERAL] : 178
+[T, *] : 118
+[T, -] : 70
+[T, &] : 56
+[T, __builtin_va_arg, T, (, NT, assignment_expression, T, ,, NT, type_name, T, )] : 21
+[T, !] : 13
+[T, sizeof, NT, unary_expression] : 8
+[T, --, NT, unary_expression] : 2
+[T, sizeof, T, (, NT, type_name, T, )] : 1
+[T, ~] : 1
+State 109
+State 110
+[T, NAME, T, VARIABLE] : 2124
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 537
+[T, (, NT, save_context, NT, declarator, T, )] : 1
+State 111
+State 112
+State 113
+[T, (, NT, scoped_parameter_type_list, T, )] : 40283
+[T, [, NT, option_type_qualifier_list, NT, option_assignment_expression, T, ]] : 2770
+[T, (, NT, save_context, NT, option_identifier_list, T, )] : 42
+State 114
+State 115
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 3694
+State 116
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 17581
+[T, const] : 4922
+State 117
+State 118
+State 119
+State 120
+State 121
+State 122
+State 123
+[T, char] : 2
+State 124
+State 125
+State 126
+[T, NAME, T, TYPE] : 4979
+[T, struct] : 3195
+[T, int] : 3165
+[T, unsigned] : 2961
+[T, char] : 2901
+[T, long] : 922
+[T, void] : 865
+[T, short] : 295
+[T, const] : 231
+[T, enum, NT, general_identifier] : 117
+[T, union] : 111
+[T, enum, NT, option_general_identifier, T, {, NT, enumerator_list, NT, option_comma, T, }] : 35
+[T, float] : 8
+[T, signed] : 6
+[T, _Bool] : 5
+State 127
+State 128
+State 129
+State 130
+State 131
+[T, NAME, T, VARIABLE] : 3469
+State 132
+State 133
+[T, char] : 1470
+[T, int] : 574
+[T, unsigned] : 538
+[T, void] : 209
+[T, struct] : 82
+[T, NAME, T, TYPE] : 18
+State 134
+State 135
+[T, int] : 27941
+[T, unsigned] : 13410
+[T, long] : 4206
+[T, char] : 4108
+[T, short] : 2759
+[T, double] : 250
+[T, const] : 100
+State 136
+[T, const] : 29
+State 137
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 17629
+[T, (, NT, save_context, NT, abstract_declarator, T, )] : 2
+State 138
+State 139
+State 140
+State 141
+State 142
+State 143
+State 144
+State 145
+State 146
+State 147
+[T, (, NT, option_argument_expression_list, T, )] : 97172
+[T, ->, NT, general_identifier] : 59925
+[T, [, NT, expression, T, ]] : 20924
+[T, ., NT, general_identifier] : 17389
+[T, ++] : 4968
+[T, --] : 654
+State 148
+State 149
+[T, NAME, T, VARIABLE] : 16518
+[T, CONSTANT] : 11694
+[T, (, NT, expression, T, )] : 6322
+[T, (, NT, type_name, T, ), NT, cast_expression] : 662
+[T, *] : 102
+[T, ++, NT, unary_expression] : 77
+[T, --, NT, unary_expression] : 68
+[T, !] : 50
+[T, STRING_LITERAL] : 8
+State 150
+State 151
+[T, /] : 16550
+[T, *] : 3741
+[T, %] : 169
+State 152
+[T, +] : 17214
+[T, -] : 9886
+State 153
+[T, <<] : 10095
+[T, >>] : 2489
+State 154
+[T, >] : 25223
+[T, <] : 15373
+[T, <=] : 14991
+[T, >=] : 3126
+State 155
+[T, ==] : 14627
+[T, !=] : 6565
+State 156
+[T, &, NT, equality_expression] : 4305
+State 157
+[T, ^, NT, and_expression] : 86
+State 158
+[T, |, NT, exclusive_or_expression] : 2838
+State 159
+[T, &&, NT, inclusive_or_expression] : 27803
+State 160
+[T, ?, NT, expression, T, :, NT, conditional_expression] : 11576
+[T, ||, NT, logical_and_expression] : 10369
+State 161
+State 162
+State 163
+State 164
+State 165
+[T, NAME, T, VARIABLE] : 71293
+[T, (, NT, expression, T, )] : 52368
+[T, (, NT, type_name, T, ), NT, cast_expression] : 38193
+[T, CONSTANT] : 18627
+[T, int] : 15566
+[T, long] : 13506
+[T, sizeof, T, (, NT, type_name, T, )] : 13105
+[T, void] : 12095
+[T, NAME, T, TYPE] : 7176
+[T, *] : 3262
+[T, unsigned] : 2935
+[T, char] : 2312
+[T, struct] : 2048
+[T, !] : 1114
+[T, const] : 928
+[T, STRING_LITERAL] : 687
+[T, &] : 592
+[T, sizeof, NT, unary_expression] : 512
+[T, -] : 489
+[T, double] : 196
+[T, ~] : 146
+[T, (, NT, type_name, T, ), T, {, NT, initializer_list, NT, option_comma, T, }] : 28
+[T, signed] : 10
+[T, --, NT, unary_expression] : 8
+[T, union] : 8
+[T, ++, NT, unary_expression] : 8
+[T, _Alignof, T, (, NT, type_name, T, )] : 3
+[T, float] : 3
+[T, short] : 2
+State 166
+State 167
+[T, (, NT, assignment_expression, T, ,, NT, type_name, T, )] : 96
+State 168
+[T, NAME, T, VARIABLE] : 690
+[T, (, NT, expression, T, )] : 101
+[T, *] : 11
+State 169
+[T, NAME, T, VARIABLE] : 495
+[T, *] : 8
+[T, (, NT, expression, T, )] : 1
+State 170
+[T, (, NT, type_name, T, )] : 15900
+[T, (, NT, expression, T, )] : 1362
+[T, STRING_LITERAL] : 192
+[T, *] : 153
+[T, NAME, T, VARIABLE] : 126
+State 171
+[T, (, NT, type_name, T, )] : 4
+State 172
+State 173
+State 174
+State 175
+State 176
+State 177
+State 178
+[T, ,, T, STRING_LITERAL, T, ), T, ;] : 15
+State 179
+[T, VARIABLE] : 274937
+State 180
+State 181
+[T, =] : 38167
+[T, +=] : 1604
+[T, |=] : 509
+[T, -=] : 311
+[T, &=] : 114
+[T, >>=] : 64
+[T, ^=] : 51
+[T, /=] : 41
+[T, *=] : 38
+[T, <<=] : 24
+[T, %=] : 5
+State 182
+State 183
+State 184
+State 185
+State 186
+[T, const] : 45827
+[T, int] : 41117
+[T, NAME, T, TYPE] : 37131
+[T, char] : 30483
+[T, void] : 27259
+[T, struct] : 10924
+[T, unsigned] : 5071
+[T, long] : 4739
+[T, double] : 2979
+[T, NAME, T, VARIABLE] : 426
+[T, float] : 366
+[T, union] : 153
+[T, enum, NT, general_identifier] : 137
+[T, _Bool] : 118
+[T, register] : 1
+State 187
+[T, )] : 206305
+State 188
+[T, CONSTANT] : 16949
+[T, (, NT, expression, T, )] : 641
+[T, NAME, T, VARIABLE] : 139
+[T, sizeof, NT, unary_expression] : 8
+[T, sizeof, T, (, NT, type_name, T, )] : 7
+[T, (, NT, type_name, T, ), NT, cast_expression] : 1
+State 189
+State 190
+State 191
+[T, )] : 5061
+State 192
+State 193
+State 194
+State 195
+State 196
+State 197
+State 198
+[T, NAME, T, TYPE] : 21343
+[T, }] : 19796
+[T, int] : 16601
+[T, char] : 11472
+[T, unsigned] : 10940
+[T, struct] : 9281
+[T, long] : 3006
+[T, void] : 2608
+[T, const] : 1712
+[T, short] : 1341
+[T, union] : 958
+[T, signed] : 574
+[T, _Bool] : 282
+[T, enum, NT, general_identifier] : 124
+[T, float] : 65
+[T, enum, NT, option_general_identifier, T, {, NT, enumerator_list, NT, option_comma, T, }] : 41
+[T, double] : 30
+State 199
+State 200
+[T, NAME, T, VARIABLE] : 77815
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 18529
+[T, (, NT, save_context, NT, declarator, T, )] : 2307
+[T, NAME, T, TYPE] : 17
+State 201
+[T, }] : 45745
+[T, NAME, T, VARIABLE] : 42357
+[T, return, NT, option_expression, T, ;] : 23930
+[T, NAME, T, TYPE] : 5951
+[T, case, NT, constant_expression, T, :, NT, statement] : 4941
+[T, break, T, ;] : 3882
+[T, int] : 2310
+[T, (, NT, expression, T, )] : 1888
+[T, *] : 1862
+[T, struct] : 1728
+[T, char] : 1654
+[T, goto, NT, general_identifier, T, ;] : 1114
+[T, const] : 1102
+[T, unsigned] : 861
+[T, (, NT, type_name, T, ), NT, cast_expression] : 544
+[T, default, T, :, NT, statement] : 529
+[T, static] : 234
+[T, continue, T, ;] : 211
+[T, ++, NT, unary_expression] : 169
+[T, register] : 160
+[T, _Bool] : 152
+[T, long] : 99
+[T, double] : 88
+[T, void] : 74
+[T, --, NT, unary_expression] : 60
+[T, enum, NT, option_general_identifier, T, {, NT, enumerator_list, NT, option_comma, T, }] : 52
+[T, union] : 51
+[T, enum, NT, general_identifier] : 36
+[T, extern] : 17
+[T, float] : 13
+[T, short] : 7
+[T, typedef, NT, list_eq1_type_specifier_unique_declaration_specifier] : 2
+[T, signed] : 2
+[T, _Static_assert, T, (, NT, constant_expression, T, ,, T, STRING_LITERAL, T, ), T, ;] : 2
+[T, volatile] : 1
+State 202
+State 203
+State 204
+[T, ,, NT, enumerator] : 67017
+[T, ,] : 77
+State 205
+State 206
+[T, =, NT, constant_expression] : 9493
+State 207
+State 208
+[T, int] : 287
+[T, short] : 287
+[T, char] : 251
+State 209
+State 210
+State 211
+State 212
+State 213
+State 214
+State 215
+State 216
+State 217
+State 218
+State 219
+State 220
+State 221
+State 222
+State 223
+State 224
+State 225
+State 226
+State 227
+State 228
+State 229
+State 230
+[T, (, NT, option_scoped_parameter_type_list, T, )] : 298
+State 231
+[T, [, NT, option_assignment_expression, T, ]] : 704
+State 232
+State 233
+State 234
+State 235
+[T, NAME, T, VARIABLE] : 69395
+[T, (, NT, expression, T, )] : 11746
+[T, CONSTANT] : 2309
+[T, STRING_LITERAL] : 2259
+[T, &] : 1925
+[T, (, NT, type_name, T, ), NT, cast_expression] : 1161
+[T, *] : 349
+[T, sizeof, T, (, NT, type_name, T, )] : 129
+[T, sizeof, NT, unary_expression] : 92
+[T, -] : 43
+[T, __builtin_va_arg, T, (, NT, assignment_expression, T, ,, NT, type_name, T, )] : 10
+[T, ++, NT, unary_expression] : 3
+[T, ~] : 2
+[T, --, NT, unary_expression] : 1
+State 236
+[T, CONSTANT] : 14747
+[T, NAME, T, VARIABLE] : 5205
+[T, (, NT, expression, T, )] : 333
+[T, -] : 286
+[T, (, NT, type_name, T, ), NT, cast_expression] : 236
+[T, *] : 44
+[T, sizeof, NT, unary_expression] : 36
+[T, --, NT, unary_expression] : 17
+[T, ++, NT, unary_expression] : 11
+[T, !] : 9
+State 237
+[T, NAME, T, VARIABLE] : 17378
+[T, NAME, T, TYPE] : 11
+State 238
+[T, NAME, T, VARIABLE] : 59900
+[T, NAME, T, TYPE] : 25
+State 239
+State 240
+State 241
+State 242
+[T, (, NT, expression, T, )] : 15092
+[T, CONSTANT] : 2299
+[T, sizeof, T, (, NT, type_name, T, )] : 1724
+[T, NAME, T, VARIABLE] : 1306
+[T, (, NT, type_name, T, ), NT, cast_expression] : 340
+[T, sizeof, NT, unary_expression] : 115
+[T, *] : 2
+[T, -] : 2
+[T, _Alignof, T, (, NT, type_name, T, )] : 1
+State 243
+State 244
+State 245
+State 246
+[T, CONSTANT] : 16180
+[T, (, NT, expression, T, )] : 5339
+[T, NAME, T, VARIABLE] : 4474
+[T, sizeof, NT, unary_expression] : 537
+[T, sizeof, T, (, NT, type_name, T, )] : 281
+[T, (, NT, type_name, T, ), NT, cast_expression] : 240
+[T, *] : 29
+[T, !] : 15
+[T, ++, NT, unary_expression] : 3
+[T, &] : 1
+[T, -] : 1
+State 247
+State 248
+State 249
+[T, CONSTANT] : 8854
+[T, (, NT, expression, T, )] : 3599
+[T, NAME, T, VARIABLE] : 131
+State 250
+State 251
+State 252
+[T, CONSTANT] : 30147
+[T, (, NT, expression, T, )] : 15855
+[T, (, NT, type_name, T, ), NT, cast_expression] : 7420
+[T, NAME, T, VARIABLE] : 4976
+[T, -] : 202
+[T, sizeof, T, (, NT, type_name, T, )] : 55
+[T, sizeof, NT, unary_expression] : 33
+[T, *] : 18
+[T, &] : 7
+State 253
+State 254
+State 255
+State 256
+State 257
+[T, CONSTANT] : 9605
+[T, (, NT, expression, T, )] : 5673
+[T, NAME, T, VARIABLE] : 4650
+[T, (, NT, type_name, T, ), NT, cast_expression] : 736
+[T, -] : 353
+[T, &] : 86
+[T, *] : 73
+[T, sizeof, NT, unary_expression] : 6
+[T, sizeof, T, (, NT, type_name, T, )] : 5
+[T, STRING_LITERAL] : 3
+[T, !] : 2
+State 258
+State 259
+State 260
+[T, CONSTANT] : 2695
+[T, (, NT, expression, T, )] : 1052
+[T, (, NT, type_name, T, ), NT, cast_expression] : 210
+[T, NAME, T, VARIABLE] : 183
+[T, ~] : 133
+[T, !] : 31
+[T, *] : 1
+State 261
+[T, CONSTANT] : 42
+[T, (, NT, expression, T, )] : 19
+[T, NAME, T, VARIABLE] : 19
+[T, (, NT, type_name, T, ), NT, cast_expression] : 3
+[T, *] : 2
+[T, !] : 1
+State 262
+[T, CONSTANT] : 1349
+[T, (, NT, expression, T, )] : 1129
+[T, NAME, T, VARIABLE] : 350
+[T, (, NT, type_name, T, ), NT, cast_expression] : 3
+[T, ~] : 3
+[T, !] : 2
+[T, *] : 2
+State 263
+[T, (, NT, expression, T, )] : 12596
+[T, NAME, T, VARIABLE] : 10702
+[T, !] : 4084
+[T, *] : 273
+[T, CONSTANT] : 231
+[T, (, NT, type_name, T, ), NT, cast_expression] : 37
+[T, --, NT, unary_expression] : 12
+[T, -] : 2
+State 264
+[T, (, NT, expression, T, )] : 8628
+[T, NAME, T, VARIABLE] : 1309
+[T, !] : 180
+[T, *] : 150
+[T, CONSTANT] : 60
+[T, (, NT, type_name, T, ), NT, cast_expression] : 40
+[T, -] : 1
+[T, --, NT, unary_expression] : 1
+State 265
+[T, NAME, T, VARIABLE] : 7603
+[T, (, NT, expression, T, )] : 2535
+[T, CONSTANT] : 639
+[T, (, NT, type_name, T, ), NT, cast_expression] : 497
+[T, STRING_LITERAL] : 139
+[T, &] : 68
+[T, -] : 47
+[T, ~] : 31
+[T, *] : 12
+[T, !] : 3
+[T, ++, NT, unary_expression] : 1
+[T, sizeof, NT, unary_expression] : 1
+State 266
+State 267
+[T, )] : 201899
+[T, ,, NT, assignment_expression] : 162
+State 268
+State 269
+[T, ), NT, cast_expression] : 56757
+[T, ), T, {, NT, initializer_list, NT, option_comma, T, }] : 28
+State 270
+State 271
+[T, NAME, T, VARIABLE] : 96
+State 272
+State 273
+[T, *] : 76
+[T, NAME, T, VARIABLE] : 26
+State 274
+State 275
+State 276
+[T, char] : 10287
+[T, NAME, T, TYPE] : 4129
+[T, STRING_LITERAL] : 752
+[T, int] : 514
+[T, NAME, T, VARIABLE] : 495
+[T, unsigned] : 405
+[T, void] : 268
+[T, struct] : 173
+[T, long] : 95
+[T, *] : 74
+[T, (, NT, expression, T, )] : 35
+[T, union] : 13
+[T, const] : 12
+[T, (, NT, type_name, T, ), NT, cast_expression] : 6
+[T, short] : 2
+[T, double] : 1
+[T, float] : 1
+State 277
+[T, struct] : 3
+[T, NAME, T, TYPE] : 1
+State 278
+[T, STRING_LITERAL, T, ), T, ;] : 15
+State 279
+[T, NAME, T, VARIABLE] : 21569
+[T, CONSTANT] : 10396
+[T, (, NT, expression, T, )] : 5714
+[T, (, NT, type_name, T, ), NT, cast_expression] : 1672
+[T, *] : 487
+[T, -] : 303
+[T, &] : 296
+[T, !] : 137
+[T, STRING_LITERAL] : 130
+[T, ~] : 100
+[T, __builtin_va_arg, T, (, NT, assignment_expression, T, ,, NT, type_name, T, )] : 59
+[T, sizeof, NT, unary_expression] : 37
+[T, ++, NT, unary_expression] : 19
+[T, sizeof, T, (, NT, type_name, T, )] : 9
+State 280
+State 281
+State 282
+State 283
+State 284
+State 285
+State 286
+State 287
+State 288
+State 289
+State 290
+State 291
+[T, ,, NT, option_designation, NT, c_initializer] : 27158
+[T, ,] : 150
+State 292
+[T, CONSTANT] : 1624
+[T, STRING_LITERAL] : 948
+[T, {, NT, initializer_list, NT, option_comma, T, }] : 266
+[T, (, NT, expression, T, )] : 123
+[T, NAME, T, VARIABLE] : 110
+[T, -] : 17
+[T, &] : 6
+[T, (, NT, type_name, T, ), NT, cast_expression] : 4
+[T, ~] : 1
+[T, sizeof, NT, unary_expression] : 1
+State 293
+State 294
+[T, =] : 7
+State 295
+[T, ., NT, general_identifier] : 5
+[T, [, NT, constant_expression, T, ]] : 3
+State 296
+State 297
+State 298
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 224493
+[T, NAME, T, VARIABLE] : 171497
+[T, (, NT, save_context, NT, declarator, T, )] : 1334
+[T, (, NT, save_context, NT, abstract_declarator, T, )] : 296
+State 299
+[T, )] : 547
+State 300
+[T, ,, NT, parameter_declaration] : 237379
+[T, ,, T, ...] : 8948
+State 301
+State 302
+[T, ,, NT, var_name] : 482
+State 303
+State 304
+State 305
+[T, ]] : 21748
+State 306
+State 307
+State 308
+State 309
+State 310
+State 311
+State 312
+State 313
+[T, ;] : 100174
+State 314
+[T, ,, NT, struct_declarator] : 913
+State 315
+State 316
+[T, :, NT, constant_expression] : 3661
+State 317
+State 318
+State 319
+[T, :, NT, statement] : 380
+State 320
+[T, if, T, (, NT, expression, T, ), NT, scoped_statement] : 24285
+[T, {, NT, option_block_item_list, T, }] : 24104
+[T, if, T, (, NT, expression, T, ), NT, scoped_statement, T, else, NT, scoped_statement] : 5205
+[T, for, T, (, NT, option_expression, T, ;, NT, option_expression, T, ;, NT, option_expression, T, ), NT, scoped_statement] : 2442
+[T, do, NT, scoped_statement, T, while, T, (, NT, expression, T, ), T, ;] : 2006
+[T, while, T, (, NT, expression, T, ), NT, scoped_statement] : 1394
+[T, switch, T, (, NT, expression, T, ), NT, scoped_statement] : 677
+[T, for, T, (, NT, declaration, NT, option_expression, T, ;, NT, option_expression, T, ), NT, scoped_statement] : 4
+State 321
+State 322
+State 323
+State 324
+State 325
+[T, ,, NT, assignment_expression] : 346
+State 326
+State 327
+State 328
+State 329
+State 330
+State 331
+[T, ;] : 59330
+State 332
+[T, :, NT, statement] : 533
+State 333
+State 334
+[T, CONSTANT] : 9670
+[T, NAME, T, VARIABLE] : 1468
+[T, (, NT, expression, T, )] : 460
+[T, -] : 24
+State 335
+[T, NAME, T, VARIABLE] : 1500
+State 336
+[T, ;] : 557
+State 337
+[T, ;] : 5192
+State 338
+[T, NAME, T, VARIABLE] : 17499
+[T, (, NT, expression, T, )] : 8121
+[T, CONSTANT] : 1727
+[T, (, NT, type_name, T, ), NT, cast_expression] : 591
+[T, -] : 394
+[T, &] : 29
+[T, !] : 24
+[T, *] : 24
+[T, STRING_LITERAL] : 15
+State 339
+[T, }] : 3469
+State 340
+[T, NAME, T, VARIABLE] : 67017
+State 341
+[T, CONSTANT] : 6966
+[T, (, NT, expression, T, )] : 1558
+[T, NAME, T, VARIABLE] : 736
+[T, -] : 193
+[T, sizeof, T, (, NT, type_name, T, )] : 38
+[T, sizeof, NT, unary_expression] : 2
+State 342
+State 343
+State 344
+[T, (, NT, option_scoped_parameter_type_list, T, )] : 50
+State 345
+State 346
+[T, CONSTANT] : 286
+State 347
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 2
+State 348
+State 349
+State 350
+State 351
+[T, )] : 97172
+State 352
+[T, ,, NT, assignment_expression] : 105725
+State 353
+[T, ]] : 20924
+State 354
+State 355
+State 356
+State 357
+[T, *] : 323
+[T, /] : 62
+[T, %] : 36
+State 358
+State 359
+State 360
+State 361
+State 362
+State 363
+State 364
+State 365
+[T, &&, NT, inclusive_or_expression] : 134
+State 366
+[T, :, NT, conditional_expression] : 11576
+[T, ,, NT, assignment_expression] : 5
+State 367
+State 368
+[T, NAME, T, VARIABLE] : 384
+[T, (, NT, expression, T, )] : 73
+[T, ++, NT, unary_expression] : 32
+[T, CONSTANT] : 18
+[T, (, NT, type_name, T, ), NT, cast_expression] : 9
+[T, !] : 5
+State 369
+[T, (, NT, expression, T, )] : 22014
+[T, CONSTANT] : 21312
+[T, -] : 8058
+[T, NAME, T, VARIABLE] : 4630
+[T, sizeof, T, (, NT, type_name, T, )] : 319
+[T, &] : 125
+[T, (, NT, type_name, T, ), NT, cast_expression] : 119
+[T, *] : 63
+[T, ~] : 57
+[T, {, NT, initializer_list, NT, option_comma, T, }] : 28
+[T, STRING_LITERAL] : 25
+[T, ++, NT, unary_expression] : 20
+[T, sizeof, NT, unary_expression] : 13
+[T, __builtin_va_arg, T, (, NT, assignment_expression, T, ,, NT, type_name, T, )] : 2
+State 370
+State 371
+[T, ,, NT, type_name, T, )] : 96
+State 372
+State 373
+[T, )] : 15900
+State 374
+[T, )] : 4
+State 375
+[T, ), T, ;] : 15
+State 376
+State 377
+[T, }] : 3072
+State 378
+State 379
+State 380
+State 381
+State 382
+[T, CONSTANT] : 3
+State 383
+[T, NAME, T, VARIABLE] : 5
+State 384
+State 385
+State 386
+[T, NAME, T, VARIABLE] : 204478
+[T, (, NT, save_context, NT, abstract_declarator, T, )] : 50
+[T, (, NT, save_context, NT, declarator, T, )] : 33
+[T, NAME, T, TYPE] : 16
+State 387
+State 388
+State 389
+State 390
+State 391
+[T, NAME, T, TYPE] : 98428
+[T, const] : 47481
+[T, int] : 45288
+[T, char] : 23372
+[T, struct] : 10128
+[T, ...] : 8948
+[T, void] : 5479
+[T, unsigned] : 2437
+[T, long] : 2390
+[T, double] : 1063
+[T, _Bool] : 461
+[T, enum, NT, general_identifier] : 428
+[T, float] : 314
+[T, union] : 106
+[T, short] : 2
+[T, register] : 2
+State 392
+[T, NAME, T, VARIABLE] : 482
+State 393
+State 394
+State 395
+State 396
+State 397
+State 398
+[T, NAME, T, VARIABLE] : 832
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 81
+State 399
+[T, CONSTANT] : 3592
+[T, (, NT, type_name, T, ), NT, cast_expression] : 69
+State 400
+[T, NAME, T, VARIABLE] : 132
+[T, return, NT, option_expression, T, ;] : 22
+[T, *] : 6
+[T, --, NT, unary_expression] : 2
+[T, ++, NT, unary_expression] : 1
+[T, (, NT, expression, T, )] : 1
+State 401
+State 402
+State 403
+State 404
+[T, (, NT, expression, T, ), NT, scoped_statement] : 24285
+[T, (, NT, expression, T, ), NT, scoped_statement, T, else, NT, scoped_statement] : 5205
+State 405
+[T, (, NT, expression, T, ), NT, scoped_statement] : 677
+State 406
+[T, (, NT, expression, T, ), NT, scoped_statement] : 1394
+State 407
+State 408
+[T, (, NT, option_expression, T, ;, NT, option_expression, T, ;, NT, option_expression, T, ), NT, scoped_statement] : 2442
+[T, (, NT, declaration, NT, option_expression, T, ;, NT, option_expression, T, ), NT, scoped_statement] : 4
+State 409
+State 410
+[T, return, NT, option_expression, T, ;] : 164
+[T, NAME, T, VARIABLE] : 164
+[T, break, T, ;] : 51
+[T, goto, NT, general_identifier, T, ;] : 45
+[T, (, NT, expression, T, )] : 38
+[T, *] : 6
+[T, continue, T, ;] : 1
+[T, --, NT, unary_expression] : 1
+[T, case, NT, constant_expression, T, :, NT, statement] : 1
+State 411
+[T, :, NT, statement] : 11622
+State 412
+[T, ;] : 1500
+State 413
+State 414
+State 415
+[T, ;] : 29270
+State 416
+State 417
+State 418
+State 419
+[T, int] : 103
+[T, void] : 82
+[T, NAME, T, TYPE] : 81
+[T, struct] : 50
+[T, char] : 32
+State 420
+[T, )] : 348
+State 421
+State 422
+[T, ]] : 704
+State 423
+State 424
+State 425
+State 426
+[T, )] : 348
+State 427
+State 428
+State 429
+[T, NAME, T, VARIABLE] : 62530
+[T, CONSTANT] : 30311
+[T, STRING_LITERAL] : 3845
+[T, (, NT, expression, T, )] : 3463
+[T, (, NT, type_name, T, ), NT, cast_expression] : 2733
+[T, &] : 1908
+[T, sizeof, NT, unary_expression] : 398
+[T, sizeof, T, (, NT, type_name, T, )] : 209
+[T, *] : 172
+[T, -] : 137
+[T, --, NT, unary_expression] : 8
+[T, !] : 6
+[T, ++, NT, unary_expression] : 3
+[T, __builtin_va_arg, T, (, NT, assignment_expression, T, ,, NT, type_name, T, )] : 2
+State 430
+State 431
+[T, (, NT, expression, T, )] : 5251
+[T, NAME, T, VARIABLE] : 3969
+[T, CONSTANT] : 819
+[T, (, NT, type_name, T, ), NT, cast_expression] : 683
+[T, *] : 537
+[T, STRING_LITERAL] : 172
+[T, &] : 67
+[T, -] : 39
+[T, ~] : 30
+[T, !] : 4
+[T, sizeof, T, (, NT, type_name, T, )] : 3
+[T, __builtin_va_arg, T, (, NT, assignment_expression, T, ,, NT, type_name, T, )] : 2
+State 432
+State 433
+State 434
+State 435
+State 436
+[T, int] : 30
+[T, NAME, T, TYPE] : 16
+[T, long] : 13
+[T, unsigned] : 12
+[T, const] : 8
+[T, void] : 6
+[T, char] : 4
+[T, double] : 3
+[T, short] : 2
+[T, signed] : 2
+State 437
+State 438
+State 439
+State 440
+[T, ;] : 15
+State 441
+State 442
+[T, CONSTANT] : 16531
+[T, STRING_LITERAL] : 4012
+[T, NAME, T, VARIABLE] : 2876
+[T, {, NT, initializer_list, NT, option_comma, T, }] : 2104
+[T, -] : 979
+[T, (, NT, expression, T, )] : 685
+[T, &] : 74
+[T, sizeof, NT, unary_expression] : 33
+[T, (, NT, type_name, T, ), NT, cast_expression] : 27
+[T, ~] : 5
+State 443
+[T, ]] : 3
+State 444
+State 445
+[T, *, NT, option_type_qualifier_list, NT, option_pointer] : 1709
+[T, NAME, T, VARIABLE] : 4
+State 446
+State 447
+State 448
+State 449
+State 450
+State 451
+State 452
+State 453
+State 454
+State 455
+[T, NAME, T, VARIABLE] : 20255
+[T, (, NT, expression, T, )] : 5417
+[T, !] : 2631
+[T, *] : 744
+[T, CONSTANT] : 219
+[T, (, NT, type_name, T, ), NT, cast_expression] : 101
+[T, --, NT, unary_expression] : 66
+[T, ++, NT, unary_expression] : 29
+[T, sizeof, T, (, NT, type_name, T, )] : 15
+[T, -] : 12
+[T, sizeof, NT, unary_expression] : 1
+State 456
+[T, NAME, T, VARIABLE] : 500
+[T, *] : 92
+[T, (, NT, expression, T, )] : 84
+[T, CONSTANT] : 1
+State 457
+[T, NAME, T, VARIABLE] : 841
+[T, (, NT, expression, T, )] : 321
+[T, *] : 134
+[T, CONSTANT] : 52
+[T, !] : 25
+[T, --, NT, unary_expression] : 10
+[T, ++, NT, unary_expression] : 5
+[T, &] : 4
+[T, (, NT, type_name, T, ), NT, cast_expression] : 2
+State 458
+[T, NAME, T, VARIABLE] : 8064
+[T, return, NT, option_expression, T, ;] : 4750
+[T, break, T, ;] : 736
+[T, continue, T, ;] : 336
+[T, (, NT, expression, T, )] : 335
+[T, goto, NT, general_identifier, T, ;] : 333
+[T, *] : 317
+[T, ++, NT, unary_expression] : 120
+[T, --, NT, unary_expression] : 48
+[T, (, NT, type_name, T, ), NT, cast_expression] : 23
+State 459
+[T, while, T, (, NT, expression, T, ), T, ;] : 2006
+State 460
+[T, NAME, T, VARIABLE] : 1909
+[T, (, NT, expression, T, )] : 3
+[T, int] : 2
+[T, ++, NT, unary_expression] : 2
+[T, NAME, T, TYPE] : 2
+[T, --, NT, unary_expression] : 1
+State 461
+State 462
+[T, case, NT, constant_expression, T, :, NT, statement] : 6680
+[T, NAME, T, VARIABLE] : 2263
+[T, break, T, ;] : 523
+[T, return, NT, option_expression, T, ;] : 404
+[T, *] : 293
+[T, (, NT, expression, T, )] : 40
+[T, (, NT, type_name, T, ), NT, cast_expression] : 21
+[T, continue, T, ;] : 9
+[T, goto, NT, general_identifier, T, ;] : 8
+[T, default, T, :, NT, statement] : 4
+[T, ++, NT, unary_expression] : 3
+[T, --, NT, unary_expression] : 2
+State 463
+State 464
+State 465
+State 466
+State 467
+State 468
+State 469
+State 470
+State 471
+State 472
+State 473
+State 474
+[T, ,, NT, option_designation, NT, c_initializer] : 168
+State 475
+State 476
+State 477
+State 478
+State 479
+[T, )] : 96
+State 480
+State 481
+State 482
+State 483
+[T, ), NT, scoped_statement] : 24285
+[T, ), NT, scoped_statement, T, else, NT, scoped_statement] : 5205
+[T, ,, NT, assignment_expression] : 1
+State 484
+[T, ), NT, scoped_statement] : 677
+State 485
+[T, ), NT, scoped_statement] : 1394
+[T, ,, NT, assignment_expression] : 6
+State 486
+State 487
+[T, (, NT, expression, T, ), T, ;] : 2006
+State 488
+[T, CONSTANT] : 2
+[T, NAME, T, VARIABLE] : 2
+State 489
+[T, ;, NT, option_expression, T, ;, NT, option_expression, T, ), NT, scoped_statement] : 2442
+State 490
+State 491
+State 492
+State 493
+State 494
+[T, }] : 28
+State 495
+State 496
+State 497
+State 498
+State 499
+State 500
+State 501
+State 502
+State 503
+[T, CONSTANT] : 1812
+[T, (, NT, expression, T, )] : 82
+[T, NAME, T, VARIABLE] : 74
+[T, *] : 17
+[T, --, NT, unary_expression] : 12
+[T, !] : 4
+[T, ++, NT, unary_expression] : 4
+[T, (, NT, type_name, T, ), NT, cast_expression] : 1
+State 504
+[T, ;, NT, option_expression, T, ), NT, scoped_statement] : 4
+State 505
+[T, NAME, T, VARIABLE] : 1941
+[T, *] : 229
+[T, (, NT, expression, T, )] : 150
+[T, !] : 10
+[T, CONSTANT] : 2
+[T, --, NT, unary_expression] : 1
+State 506
+State 507
+State 508
+State 509
+State 510
+State 511
+State 512
+[T, else, NT, scoped_statement] : 5205
+State 513
+State 514
+State 515
+[T, ), T, ;] : 2006
+[T, ,, NT, assignment_expression] : 1
+State 516
+[T, NAME, T, VARIABLE] : 4
+State 517
+[T, ;, NT, option_expression, T, ), NT, scoped_statement] : 2442
+State 518
+State 519
+[T, ;] : 2006
+State 520
+[T, ), NT, scoped_statement] : 4
+State 521
+[T, NAME, T, VARIABLE] : 1726
+[T, ++, NT, unary_expression] : 292
+[T, --, NT, unary_expression] : 184
+[T, (, NT, type_name, T, ), NT, cast_expression] : 59
+[T, (, NT, expression, T, )] : 2
+[T, *] : 2
+State 522
+State 523
+State 524
+State 525
+[T, ), NT, scoped_statement] : 2442
