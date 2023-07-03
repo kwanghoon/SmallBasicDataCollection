@@ -25,6 +25,8 @@ public class RawDataToStateDataManager {
       
       listForSyntaxCompletion(); // 만든 목록을 출력
       
+      listForParseStateData(); // state 정보 추가 출력
+      
    }
    
    public RawDataToStateDataManager(String args) throws IOException {
@@ -125,7 +127,25 @@ public class RawDataToStateDataManager {
            
            user_state = user_state + 1;
         }
+        
+        
    } // listForSyntaxCompletion end
+   
+   // state별 구문 후보 갯수, 모든 상태의 구문 후보 총 갯수 계산 출력
+   public static void listForParseStateData() {
+	   int user_state = 0;
+       int all_syntax_count = 0;
+       
+       System.out.println();
+       while(user_state <= MAX_STATE) {
+    	   if(map.get(user_state) != null) {
+    		   all_syntax_count += map.get(user_state).size();
+    		   System.out.println("State "+ user_state + " : " + map.get(user_state).size());
+    	   }
+    	   user_state = user_state + 1;
+       }
+       System.out.println("총 " + all_syntax_count + "개의 구문 후보 존재");
+   }
    
    // PerformanceAnalysis.java에서 사용, 구문이 만든 해쉬맵에 존재하는지 확인
    public static int searchForSyntaxCompletion(ArrayList<String> arr, int state) {
